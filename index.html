@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        function randomgen(){
+    let str='123456789ABCDEF'
+    let result='#'
+    let d=document.createElement("div");
+    for(let i=0;i<6;i++){
+        result+=str[Math.floor(Math.random()*15)]
+    }
+    d.style.width="100px";
+    d.style.height="70px";
+    d.innerHTML=result;
+    d.style.backgroundColor=result;
+    d.style.display="inline-block";
+    d.style.textAlign="center";
+    document.body.appendChild(d);
+
+    }
+setInterval(randomgen,1000);
+
+    </script>
+</body>
+</html>
